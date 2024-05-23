@@ -1,0 +1,286 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#quiz-container {
+    background-color: rgb(223, 241, 248);
+    box-shadow: 0 10px 105px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-header {
+    background-color: #fae41d;
+    color: #000000;
+    padding: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* Question */
+#question {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #018bc7;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Logo Image */
+#flag-image {
+    max-width: 400px;
+    max-height: 300px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Options */
+#options-container {
+    margin-top: 2rem;
+}
+
+.option-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #3e3e3e;
+    border: 1px solid #6c6c6c;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #f0f0f0;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.option-btn:hover {
+    background-color: #4c4c4c;
+}
+
+ .correct {
+    background-color: #f3f3f3;
+    color: #1b8b55;
+    border-color: #2ecc71;
+   
+   
+} 
+
+
+.incorrect {
+    background-color: #e72a15;
+    color: #f0f0f0;
+    border-color: #e74c3c;
+    animation: shakeX 0.5s ease-in-out;
+}
+
+
+#score-container {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#user-score {
+    color: #360a35;
+    font-weight: 600;
+}
+
+/* Result Container */
+#result-container {
+    background-color: #2c2c2c;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+#result-message {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    color: #1a8fb2;
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    #flag-image {
+        max-width: 100%;
+        max-height: none;
+    }
+}
+
+
+.btn-outline-primary {
+    border-color: #f2ff00;
+    color: #ffffffcc;
+}
+
+.btn-outline-primary:hover {
+    background-color: #7e827eaa;
+    color: #000000;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+p{
+    font-size: 1.5rem;
+    color: red;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.d-block {
+    display: block;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Animation Utilities */
+.animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+
+.animate__fadeInUp {
+    animation-name: fadeInUp;
+}
+
+.animate__tada {
+    animation-name: tada;
+}
+
+.animate__shakeX {
+    animation-name: shakeX;
+}
+
+.animate__bounce {
+   
+    animation-name: bounce ;
+}
+.color_correct{
+    color: green;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+#flag-image {
+    max-width: 200px; 
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+}
+#quiz-container .correct {
+    background-color: #00a624;
+    color: #09100d;
+    border-color: #000000;
+}
+
+#quiz-container .incorrect {
+    background-color: #e72a15;
+    color: #f0f0f0;
+    border-color: #e74c3c;
+    animation: shakeX 0.5s ease-in-out;
+}
